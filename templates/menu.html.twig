@@ -1,18 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
-        <a class="navbar-brand" href="{{ path("accueil") }}">MonSuperSite</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{ path("accueil") }}">MonSuperSite</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ path("personnages") }}">Personnages</a>
+                <a class="nav-link{% if navbar_title == "Personnages" %} active {% endif %}" href="{{ path("personnages") }}">Personnages</a>
             </li>
-            
-          </ul>
-      
-          
-        </div>
-      </nav>
+            <li class="nav-item">
+                <a class="nav-link{% if navbar_title == "Armes" %} active {% endif %}" href="{{ path("armes") }}">Armes</a>
+            </li>
+        </ul>
+    </div>
+</nav>
